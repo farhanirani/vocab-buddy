@@ -2,9 +2,9 @@ import React from "react";
 
 import BottomNavigation from "@mui/material/BottomNavigation";
 import BottomNavigationAction from "@mui/material/BottomNavigationAction";
-import RestoreIcon from "@mui/icons-material/Restore";
-import FavoriteIcon from "@mui/icons-material/Favorite";
-import ArchiveIcon from "@mui/icons-material/Archive";
+import GamepadIcon from "@mui/icons-material/Gamepad";
+import SelectAllIcon from "@mui/icons-material/SelectAll";
+
 import Paper from "@mui/material/Paper";
 
 function BottomBar({ value, setValue }) {
@@ -16,10 +16,17 @@ function BottomBar({ value, setValue }) {
         onChange={(event, newValue) => {
           setValue(newValue);
         }}
+        sx={{
+          bgcolor: "gray",
+          "& .Mui-selected": {
+            "& .MuiSvgIcon-root, & .MuiBottomNavigationAction-label": {
+              color: "white",
+            },
+          },
+        }}
       >
-        <BottomNavigationAction label="Recents" icon={<RestoreIcon />} />
-        <BottomNavigationAction label="Favorites" icon={<FavoriteIcon />} />
-        <BottomNavigationAction label="Archive" icon={<ArchiveIcon />} />
+        <BottomNavigationAction icon={<SelectAllIcon />} />
+        <BottomNavigationAction icon={<GamepadIcon />} />
       </BottomNavigation>
     </Paper>
   );
