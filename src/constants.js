@@ -4,13 +4,13 @@ export const VOCAB_WORDS = [
     Word: "Aberrant",
     Meaning: "Straying from the right or normal way.",
     Synonyms: "Atypical, Abnormal",
-    Sentences: "I don’t intend to suggest that his psychology was in some way aberrant or neurotic.",
+    Sentences: "I don't intend to suggest that his psychology was in some way aberrant or neurotic.",
   },
   {
     Word: "Abnegate",
     Meaning: "Deny, renounce Surrender, relinquish",
     Synonyms: "",
-    Sentences: "It would be abnegating the nation’s fundamental commitment to individual rights. Her powers were abnegated.",
+    Sentences: "It would be abnegating the nation's fundamental commitment to individual rights. Her powers were abnegated.",
   },
   {
     Word: "Accrued",
@@ -50,7 +50,7 @@ export const VOCAB_WORDS = [
   {
     Word: "Adultery",
     Meaning:
-      "Voluntary sexual intercourse between a married person and someone other than that person’s current spouse or partner.",
+      "Voluntary sexual intercourse between a married person and someone other than that person's current spouse or partner.",
     Synonyms: "Infidelity, Unfaithfulness",
     Sentences: "Ron found out that his wife Lauren had committed adultery.",
   },
@@ -59,7 +59,7 @@ export const VOCAB_WORDS = [
     Meaning: "Being pleasant and at ease in talking to others. Characterized by ease and friendliness.",
     Synonyms: "Felicitous, Congenial, Easygoing, Laid-back, Cordial",
     Sentences:
-      "She is a bright and affable person, but every little success she has feels cheapened in comparison with her mother’s overpowering accomplishments.",
+      "She is a bright and affable person, but every little success she has feels cheapened in comparison with her mother's overpowering accomplishments.",
   },
   {
     Word: "Agnostic",
@@ -215,7 +215,7 @@ export const VOCAB_WORDS = [
     Meaning:
       "To talk or act with noisy swaggering threats. To be windy and boisterous. To utter with noisy self-assertiveness.",
     Synonyms: "Rant",
-    Sentences: '"I don’t want to hear it!" he blustered. They do their work without bluster or ostentation.',
+    Sentences: "'I don't want to hear it!' he blustered. They do their work without bluster or ostentation.",
   },
   {
     Word: "Boorish",
@@ -250,10 +250,10 @@ export const VOCAB_WORDS = [
   },
   {
     Word: "Calumny",
-    Meaning: "A misrepresentation intended to harm another person’s reputation.",
+    Meaning: "A misrepresentation intended to harm another person's reputation.",
     Synonyms: "Vilification, Disparage",
     Sentences:
-      "He was the target of calumny for his unpopular beliefs. They uttered calumnies against her. Miller has waved off that claim as calumny, even though Richardson served as Miller’s faithful No. 2 for more than a decade at Xavier and Arizona.",
+      "He was the target of calumny for his unpopular beliefs. They uttered calumnies against her. Miller has waved off that claim as calumny, even though Richardson served as Miller's faithful No. 2 for more than a decade at Xavier and Arizona.",
   },
   {
     Word: "Canard",
@@ -303,7 +303,7 @@ export const VOCAB_WORDS = [
   {
     Word: "Chauvinist",
     Meaning:
-      "Believing that one’s own country or race is the best. Believing that women are naturally less important, intelligent or able than men.",
+      "Believing that one's own country or race is the best. Believing that women are naturally less important, intelligent or able than men.",
     Synonyms: "Jingoist",
     Sentences: "",
   },
@@ -311,7 +311,7 @@ export const VOCAB_WORDS = [
     Word: "Chronicle",
     Meaning: "To make a record or give details of something.",
     Synonyms: "",
-    Sentences: "Camila’s chronicles in Trials and Tribulations was an emotional journey for me.",
+    Sentences: "Camila's chronicles in Trials and Tribulations was an emotional journey for me.",
   },
   {
     Word: "Cinch",
@@ -353,7 +353,7 @@ export const VOCAB_WORDS = [
     Word: "Clique",
     Meaning: "A close and exclusive group or circle of people.",
     Synonyms: "",
-    Sentences: "One’s success depends on the people they surround themselves with, so one’s clique is extremely important.",
+    Sentences: "One's success depends on the people they surround themselves with, so one's clique is extremely important.",
   },
   {
     Word: "Cogitate",
@@ -492,18 +492,18 @@ export const VOCAB_WORDS = [
     Meaning: "Describe or portray in detail. To mark the outline of something.",
     Synonyms: "",
     Sentences:
-      "The municipal corporation put up lights delineating the street. The author’s delineation of Camila in the book 'Yellow' is very impressive!",
+      "The municipal corporation put up lights delineating the street. The author's delineation of Camila in the book 'Yellow' is very impressive!",
   },
   {
     Word: "Delirious",
     Meaning:
       "Affected by delirium. Delirium: An acute mental disturbance characterized by confused thinking and disrupted attention usually accompanied by disordered speech and hallucinations. Do not confuse 'delirious' with 'derision' or 'deleterious'.",
     Synonyms: "Agitated, Hysterical",
-    Sentences: "As the child’s temperature went up, he became delirious and didn’t know where he was.",
+    Sentences: "As the child's temperature went up, he became delirious and didn't know where he was.",
   },
   {
     Word: "Demagogue",
-    Meaning: "Pandering to the hatered and prejudices of people to satisfy one’s ulterior motives.",
+    Meaning: "Pandering to the hatered and prejudices of people to satisfy one's ulterior motives.",
     Synonyms: "",
     Sentences: "",
   },
@@ -518,7 +518,7 @@ export const VOCAB_WORDS = [
     Word: "Derelict",
     Meaning: "Lacking a sense of duty. Voluntarily abandoning something. A homeless social misfit.",
     Synonyms: "Dilapidated, Vagrant",
-    Sentences: "The town’s derelict was ransacking the garbage can for scraps.",
+    Sentences: "The town's derelict was ransacking the garbage can for scraps.",
   },
   {
     Word: "Derision",
@@ -526,7 +526,7 @@ export const VOCAB_WORDS = [
       "The use of ridicule or scorn to show contempt. A state of being laughed at or ridiculed. An object of ridicule or scorn. Do not confuse 'derision' with 'delirious'.",
     Synonyms: "",
     Sentences:
-      "Being constantly derided can make a person bitter. It’s an object of derision more often than praise within the ecosystem.",
+      "Being constantly derided can make a person bitter. It's an object of derision more often than praise within the ecosystem.",
   },
   {
     Word: "Destitute",
@@ -563,7 +563,7 @@ export const VOCAB_WORDS = [
     Meaning: "Force, power To make a dent in.",
     Synonyms: "",
     Sentences:
-      "She succeeded by dint of hard work. Their attitude toward public transportation can be best summed up by Elon Musk, the guy who is, by dint of his power and influence, somehow treated as the USA’s leading authority on transportation.",
+      "She succeeded by dint of hard work. Their attitude toward public transportation can be best summed up by Elon Musk, the guy who is, by dint of his power and influence, somehow treated as the USA's leading authority on transportation.",
   },
   {
     Word: "Dipsomaniac",
@@ -575,19 +575,19 @@ export const VOCAB_WORDS = [
     Word: "Discombobulate",
     Meaning: "To cause to be in a state of confusion.",
     Synonyms: "",
-    Sentences: "Adria found the all the boy’s gregariousness discombobulating.",
+    Sentences: "Adria found the all the boy's gregariousness discombobulating.",
   },
   {
     Word: "Disconcerting",
     Meaning: "To throw into confusion.",
     Synonyms: "Confound, Fluster",
-    Sentences: "The housekeeper’s countenance was disconcerting.",
+    Sentences: "The housekeeper's countenance was disconcerting.",
   },
   {
     Word: "Disparaged",
     Meaning: "Represent something as being of little worth.",
     Synonyms: "Undervalue, Underrate, Vilify, Decry, Calumny",
-    Sentences: "One should never disparage other’s efforts.",
+    Sentences: "One should never disparage other's efforts.",
   },
   {
     Word: "Disquietude",
@@ -619,7 +619,7 @@ export const VOCAB_WORDS = [
       "A group of individuals at a particular level or grade in an organization or field of activity. An arrangement of a body of troops. A flight formation.",
     Synonyms: "",
     Sentences:
-      "What’s most unusual about Selena—what distinguishes her from other celebrities in her echelon—is the way she’s grown softer, rather than harder, as she’s gotten older. The confidence came first; then came the confidence to let it drop. Geese flying in echelon.",
+      "What's most unusual about Selena—what distinguishes her from other celebrities in her echelon—is the way she's grown softer, rather than harder, as she's gotten older. The confidence came first; then came the confidence to let it drop. Geese flying in echelon.",
   },
   { Word: "Effete", Meaning: "Degenerate, worn out and weakened. Sterile", Synonyms: "", Sentences: "" },
   { Word: "Egregious", Meaning: "A grave and blatant/glaring error.", Synonyms: "Flagrant", Sentences: "" },
@@ -699,7 +699,7 @@ export const VOCAB_WORDS = [
     Meaning:
       "A deed, a bond, money or a piece of property held in trust by a third party to be turned over to the grantee only upon fulfillment of a condition. Do not confuse 'escrow' with 'mortgage'. Mortgage can be both escrow and non-escrow.",
     Synonyms: "",
-    Sentences: "The buyers put their money in the builder’s escrow account.",
+    Sentences: "The buyers put their money in the builder's escrow account.",
   },
   {
     Word: "Espouse",
@@ -839,7 +839,7 @@ export const VOCAB_WORDS = [
     Word: "Fortitude",
     Meaning: "Strength of mind that enables a person to encounter danger or bear pain or adversity with courage.",
     Synonyms: "Grit, Spunk, Pluck",
-    Sentences: "Everyone in the family was succored by Selena’s fortitude and steadfastness.",
+    Sentences: "Everyone in the family was succored by Selena's fortitude and steadfastness.",
   },
   { Word: "Futilitarian", Meaning: "Pessimist Cynic", Synonyms: "", Sentences: "" },
   {
@@ -887,7 +887,7 @@ export const VOCAB_WORDS = [
     Word: "Humdinger",
     Meaning: "A striking or extraordinary person or thing.",
     Synonyms: "Lollapalooza, Doozy",
-    Sentences: "The cricket match was a humdinger! Any team could’ve won till the last two balls of the match!",
+    Sentences: "The cricket match was a humdinger! Any team could've won till the last two balls of the match!",
   },
   {
     Word: "Icky",
@@ -927,7 +927,7 @@ export const VOCAB_WORDS = [
       "Given to or characterized by insolent rudeness. Not restrained within due or proper bounds especially of propriety or good taste. Irrelevant Exceeding the bounds of propriety in showing interest or curiosity or in offering advice.",
     Synonyms: "Audacious, Insolent, Cocky, Officious, Intrusive",
     Sentences:
-      "The Act’s broad support across the political spectrum has been shored up by perceptions of an impertinent company testing the nation’s resolve.",
+      "The Act's broad support across the political spectrum has been shored up by perceptions of an impertinent company testing the nation's resolve.",
   },
   {
     Word: "Impinge",
@@ -945,7 +945,7 @@ export const VOCAB_WORDS = [
     Word: "Impugn",
     Meaning: "Oppose or attack someone as false or lacking integrity.",
     Synonyms: "",
-    Sentences: "Felix’s motives have been scrutinized and impugned.",
+    Sentences: "Felix's motives have been scrutinized and impugned.",
   },
   { Word: "Impute", Meaning: "Attribute a bad habit or act to someone.", Synonyms: "", Sentences: "" },
   {
@@ -1021,11 +1021,11 @@ export const VOCAB_WORDS = [
     Meaning: "To tease with taunting words. To be in accord.",
     Synonyms: "",
     Sentences:
-      "Finally, a story that doesn’t jibe with the facts. Her constant and unrelenting jibes at him led to him quitting the team.",
+      "Finally, a story that doesn't jibe with the facts. Her constant and unrelenting jibes at him led to him quitting the team.",
   },
   {
     Word: "Jingoist",
-    Meaning: "Believing that one’s country is the best, often shown in enthusiastic support for a war against another country.",
+    Meaning: "Believing that one's country is the best, often shown in enthusiastic support for a war against another country.",
     Synonyms: "Chauvinist",
     Sentences: "",
   },
@@ -1040,7 +1040,7 @@ export const VOCAB_WORDS = [
     Word: "Juggernaut",
     Meaning: "A massive inexorable (unstoppable) force, campaign, movement, or object that crushes whatever is in its path.",
     Synonyms: "Crusade, Campaign",
-    Sentences: "There was no escaping the juggernaut of hype for the studio’s biggest summer blockbuster.",
+    Sentences: "There was no escaping the juggernaut of hype for the studio's biggest summer blockbuster.",
   },
   {
     Word: "Junta",
@@ -1053,7 +1053,7 @@ export const VOCAB_WORDS = [
     Word: "Juxtapose",
     Meaning: "To place things side by side (so as to compare them).",
     Synonyms: "",
-    Sentences: "Juxtaposing Matisse and Picasso’s paintings would be a good way to see their friendly competition!",
+    Sentences: "Juxtaposing Matisse and Picasso's paintings would be a good way to see their friendly competition!",
   },
   {
     Word: "Ken",
@@ -1065,7 +1065,7 @@ export const VOCAB_WORDS = [
     Word: "Kilter",
     Meaning: "Proper or usual state or condition.",
     Synonyms: "Order, Condition, Form, Health, Shape",
-    Sentences: "Since I dropped my food processor, it’s been all out of kilter.",
+    Sentences: "Since I dropped my food processor, it's been all out of kilter.",
   },
   {
     Word: "Kismet",
@@ -1172,7 +1172,7 @@ export const VOCAB_WORDS = [
     Word: "Limpid",
     Meaning: "Clear and simple in style. Marked by transparency. Absolutely serene and untroubled.",
     Synonyms: "",
-    Sentences: "We saw a lot of limpid streams. Hussein Nasser’s limpid presentation style makes concepts easy to understand.",
+    Sentences: "We saw a lot of limpid streams. Hussein Nasser's limpid presentation style makes concepts easy to understand.",
   },
   {
     Word: "Litany",
@@ -1185,11 +1185,11 @@ export const VOCAB_WORDS = [
     Meaning: "The act, process or practice of settling a dispute in a court of law.",
     Synonyms: "",
     Sentences:
-      "An attorney who specializes in the litigation of property disputes. One can’t realize how much it costs to run one of these litigations. To get a battery of lawyers into a courtroom and do all the planning costs a lot of money.",
+      "An attorney who specializes in the litigation of property disputes. One can't realize how much it costs to run one of these litigations. To get a battery of lawyers into a courtroom and do all the planning costs a lot of money.",
   },
   {
     Word: "Lucid",
-    Meaning: "Clear to the understanding. Translucent Having full use of one’s faculties.",
+    Meaning: "Clear to the understanding. Translucent Having full use of one's faculties.",
     Synonyms: "Sane, Intelligible, Incandescent, Unequivocal",
     Sentences: "His lucid history of this grim subject is scrupulously accurate.",
   },
@@ -1217,7 +1217,7 @@ export const VOCAB_WORDS = [
   {
     Word: "Magnum opus",
     Meaning: "A great work",
-    Synonyms: "Chef d’oeuvre",
+    Synonyms: "Chef d'oeuvre",
     Sentences: "The sculptor worked for 15 years on her magnum opus.",
   },
   {
@@ -1231,7 +1231,7 @@ export const VOCAB_WORDS = [
     Meaning: "The usually unintentionally humorous misuse or distortion of a word or phrase.",
     Synonyms: "",
     Sentences:
-      "Every kid is a virtuoso of language: those monkey-hear toddler approximations, a six-year-old’s idiosyncratic pronunciations, the malapropisms that continue well into adolescence.",
+      "Every kid is a virtuoso of language: those monkey-hear toddler approximations, a six-year-old's idiosyncratic pronunciations, the malapropisms that continue well into adolescence.",
   },
   {
     Word: "Malignant",
@@ -1241,7 +1241,7 @@ export const VOCAB_WORDS = [
   },
   {
     Word: "Malinger",
-    Meaning: "To pretend or exaggerate incapacity or illness to avoid duty or work. Don’t confuse 'malinger' with 'maligner'.",
+    Meaning: "To pretend or exaggerate incapacity or illness to avoid duty or work. Don't confuse 'malinger' with 'maligner'.",
     Synonyms: "",
     Sentences:
       "They suspect that she malingered or faked her physical state and got admitted to a hospital to avoid going to jail.",
@@ -1335,7 +1335,7 @@ export const VOCAB_WORDS = [
     Meaning: "A minute or minor detail. Petty details.",
     Synonyms: "",
     Sentences:
-      "Selena just wanted to hear how the date went, but Camila went on with this minutia about the arch of Lauren’s eyebrows. He was bewildered by the contract’s minutiae.",
+      "Selena just wanted to hear how the date went, but Camila went on with this minutia about the arch of Lauren's eyebrows. He was bewildered by the contract's minutiae.",
   },
   { Word: "Misanthrope", Meaning: "One who hates man/mankind.", Synonyms: "", Sentences: "" },
   {
@@ -1430,7 +1430,7 @@ export const VOCAB_WORDS = [
     Word: "Obsequy",
     Meaning: "Funeral ceremony.",
     Synonyms: "",
-    Sentences: "The murder victim’s father was the chief mourner at the obsequies.",
+    Sentences: "The murder victim's father was the chief mourner at the obsequies.",
   },
   {
     Word: "Obstreperous",
@@ -1473,7 +1473,7 @@ export const VOCAB_WORDS = [
   {
     Word: "Officious",
     Meaning:
-      "Volunteering one’s services where they are neither asked nor needed. Too eager to tell people what to do and having too high an opinion of one’s own importance.",
+      "Volunteering one's services where they are neither asked nor needed. Too eager to tell people what to do and having too high an opinion of one's own importance.",
     Synonyms: "Meddlesome, Presumptuous, Impertinent",
     Sentences:
       "When we came to the platform on the railway station we were met by the station master, an officious little man with a peaked cap.",
@@ -1503,7 +1503,7 @@ export const VOCAB_WORDS = [
     Meaning:
       "Something that brings disgrace. Public disgrace or ill fame that follows from conduct considered grossly wrong or vicious.",
     Synonyms: "",
-    Sentences: "They’re going ahead with the plan despite public opprobrium.",
+    Sentences: "They're going ahead with the plan despite public opprobrium.",
   },
   {
     Word: "Orwellian",
@@ -1574,7 +1574,7 @@ export const VOCAB_WORDS = [
     Word: "Penury",
     Meaning: "A cramping and oppressive lack of resources. Extreme and often stingy frugality.",
     Synonyms: "Impoverishment, Destitution, Pecuniary",
-    Sentences: "By the World Bank’s estimate, some 800m people in China have escaped penury in the past four decades.",
+    Sentences: "By the World Bank's estimate, some 800m people in China have escaped penury in the past four decades.",
   },
   {
     Word: "Perfidious",
@@ -1601,7 +1601,7 @@ export const VOCAB_WORDS = [
     Meaning: "Highly injurious or destructive.",
     Synonyms: "Deleterious, Baneful, Detrimental",
     Sentences:
-      "The most pernicious of all the problems was that the league’s new television deal had collapsed and if a replacement could not be found, French domestic soccer was facing ruin.",
+      "The most pernicious of all the problems was that the league's new television deal had collapsed and if a replacement could not be found, French domestic soccer was facing ruin.",
   },
   {
     Word: "Perturb",
@@ -1648,7 +1648,7 @@ export const VOCAB_WORDS = [
     Meaning: "Something trivial.",
     Synonyms: "Trifling",
     Sentences:
-      "Our lives don’t amount to a picayune in the great scheme of things. They argued over the most picayune details.",
+      "Our lives don't amount to a picayune in the great scheme of things. They argued over the most picayune details.",
   },
   {
     Word: "Pecuniary",
@@ -1708,7 +1708,7 @@ export const VOCAB_WORDS = [
     Word: "Plaintive",
     Meaning: "Expressive of suffering or woe.",
     Synonyms: "Melancholy, Doleful, Mournful",
-    Sentences: "The puppy’s plaintive expression after we put the toy away was rather amusing.",
+    Sentences: "The puppy's plaintive expression after we put the toy away was rather amusing.",
   },
   {
     Word: "Plasticity",
@@ -1790,7 +1790,7 @@ export const VOCAB_WORDS = [
     Word: "Precocious",
     Meaning: "Exceptionally early in development or occurrence. Exhibiting mature qualities at an unusually early age.",
     Synonyms: "Premature",
-    Sentences: "Akim Camara, a precocious three year old, played a violin at André Rieu’s concert,",
+    Sentences: "Akim Camara, a precocious three year old, played a violin at André Rieu's concert,",
   },
   {
     Word: "Preeminent",
@@ -1849,13 +1849,13 @@ export const VOCAB_WORDS = [
     Meaning: "An inclination or predisposition toward something. A strong inherent inclination toward something objectionable.",
     Synonyms: "Penchant, Propensity",
     Sentences:
-      "Professor McGonagall told Neville, “Why don’t you confer with Mr. Finnegan? As I recall, he has a particular proclivity for pyrotechnics.”",
+      "Professor McGonagall told Neville, “Why don't you confer with Mr. Finnegan? As I recall, he has a particular proclivity for pyrotechnics.”",
   },
   {
     Word: "Prodigal",
     Meaning: "Characterized by profuse or wasteful expenditure.",
     Synonyms: "Squanderer, Extravagant, Unthrifty",
-    Sentences: "The Prodigal son’s return was celebrated by his father as a return from the dead.",
+    Sentences: "The Prodigal son's return was celebrated by his father as a return from the dead.",
   },
   {
     Word: "Proliferate",
@@ -1926,7 +1926,7 @@ export const VOCAB_WORDS = [
     Word: "Puissant",
     Meaning: "Powerful",
     Synonyms: "Potent",
-    Sentences: "Harish Salve is one of India’s most respected and puissant advocates.",
+    Sentences: "Harish Salve is one of India's most respected and puissant advocates.",
   },
   {
     Word: "Punctilious",
@@ -1963,7 +1963,7 @@ export const VOCAB_WORDS = [
     Word: "Pusillanimous",
     Meaning: "Lacking courage and resolution.",
     Synonyms: "Cowardly, Dastardly, Recreant",
-    Sentences: "Pusillanimous people don’t stand up to the odds.",
+    Sentences: "Pusillanimous people don't stand up to the odds.",
   },
   {
     Word: "Putative",
@@ -2016,7 +2016,7 @@ export const VOCAB_WORDS = [
       "To cause to move by steps or degrees. Slang term that can mean 'exciting' or 'excellent,' often used as a term of empowerment among women. An insult characterizing a woman as being overdramatic or promiscuous.",
     Synonyms: "",
     Sentences:
-      "I’m so stuck between feeling ratchet and feeling classy. I’m experiencing real life duality. Not to be outdone, Megan Thee Stallion and Cardi B gave us Vegas-worthy performances that were truly classy, bougie and ratchet, in all the best ways possible. She tried to ratchet down the debt.",
+      "I'm so stuck between feeling ratchet and feeling classy. I'm experiencing real life duality. Not to be outdone, Megan Thee Stallion and Cardi B gave us Vegas-worthy performances that were truly classy, bougie and ratchet, in all the best ways possible. She tried to ratchet down the debt.",
   },
   { Word: "Rationalize", Meaning: "Justifying a wrong or selfish act.", Synonyms: "", Sentences: "" },
   {
@@ -2104,7 +2104,7 @@ export const VOCAB_WORDS = [
     Word: "Repudiate",
     Meaning: "Refuse to accept. Reject as untrue or unjust.",
     Synonyms: "Disavow, Disown, Disclaim",
-    Sentences: "The offender repudiated the plainclothes policeman’s authenticity.",
+    Sentences: "The offender repudiated the plainclothes policeman's authenticity.",
   },
   {
     Word: "Reticent",
@@ -2116,7 +2116,7 @@ export const VOCAB_WORDS = [
     Word: "Repine",
     Meaning: "To feel or express dejection or discontent.",
     Synonyms: "Complain",
-    Sentences: "There is no use repining over yesterday’s blunders. Learn form them and move on. Try to make today better.",
+    Sentences: "There is no use repining over yesterday's blunders. Learn form them and move on. Try to make today better.",
   },
   {
     Word: "Reprisal",
@@ -2137,7 +2137,7 @@ export const VOCAB_WORDS = [
     Meaning: "A retaliatory maneuver, measure or verbal response.",
     Synonyms: "Retort",
     Sentences:
-      "He’s known for having a brilliant riposte to nearly any insult. India’s surgical strikes were a riposte to terrorism.",
+      "He's known for having a brilliant riposte to nearly any insult. India's surgical strikes were a riposte to terrorism.",
   },
   {
     Word: "Rococo",
@@ -2163,7 +2163,7 @@ export const VOCAB_WORDS = [
     Meaning: "Expel from a school or college. To go to the countryside.",
     Synonyms: "",
     Sentences:
-      "Shannon’s bad behaviour got her rusticated from the college. The Kjellberg’s rusticate to the country in the Summer.",
+      "Shannon's bad behaviour got her rusticated from the college. The Kjellberg's rusticate to the country in the Summer.",
   },
   {
     Word: "Salacious",
@@ -2175,7 +2175,7 @@ export const VOCAB_WORDS = [
     Word: "Salubrious",
     Meaning: "Favorable to or promoting health or well-being.",
     Synonyms: "Salutary, Salutiferous",
-    Sentences: "Some of Akshay Kumar’s movies take up salubrious causes.",
+    Sentences: "Some of Akshay Kumar's movies take up salubrious causes.",
   },
   {
     Word: "Salutary",
@@ -2232,7 +2232,7 @@ export const VOCAB_WORDS = [
     Word: "Scuzzball",
     Meaning: "An unpleasant, dirty or dangerous person. This is a slang.",
     Synonyms: "Sleaze, Swine, Vermin",
-    Sentences: "It was ironic that Seymour’s parents called him a suczzball, when they themselves were no better.",
+    Sentences: "It was ironic that Seymour's parents called him a suczzball, when they themselves were no better.",
   },
   {
     Word: "Sedulous",
@@ -2262,16 +2262,16 @@ export const VOCAB_WORDS = [
   },
   {
     Word: "Shtick",
-    Meaning: "A usually comic or repetitious performance or routine. One’s special trait, interest or activity.",
+    Meaning: "A usually comic or repetitious performance or routine. One's special trait, interest or activity.",
     Synonyms: "",
-    Sentences: "The shtick of the show 'Selena + Chef' is Selena’s amateurism.",
+    Sentences: "The shtick of the show 'Selena + Chef' is Selena's amateurism.",
   },
   {
     Word: "Sidereal",
     Meaning: "Relating to or expressed in relation to stars or constellations.",
     Synonyms: "Astral",
     Sentences:
-      "Called sidereal time, the measurement calculates the length of a day by comparing Earth’s rotation to the stars.",
+      "Called sidereal time, the measurement calculates the length of a day by comparing Earth's rotation to the stars.",
   },
   {
     Word: "Simian",
@@ -2309,7 +2309,7 @@ export const VOCAB_WORDS = [
     Word: "Solvent",
     Meaning: "Able to meet all financial obligations. Something that hat dissolves or can dissolve.",
     Synonyms: "",
-    Sentences: "He couldn’t stay solvent after losing his business.",
+    Sentences: "He couldn't stay solvent after losing his business.",
   },
   {
     Word: "Somatic",
@@ -2368,7 +2368,7 @@ export const VOCAB_WORDS = [
       "To be sparing or frugal. A period of time spent at a particular activity. Chore, task, assignment To restrict with respect to a share or allowance.",
     Synonyms: "",
     Sentences:
-      "He completed his stint as a DJ at the local club. It is better to stint one’s luxuries during financially lean times.",
+      "He completed his stint as a DJ at the local club. It is better to stint one's luxuries during financially lean times.",
   },
   {
     Word: "Stipulate",
@@ -2406,7 +2406,7 @@ export const VOCAB_WORDS = [
     Meaning: "Loud, unpleasant noise. Loud voice commanding attention.",
     Synonyms: "Raucous, Clamorous, Vociferous, Obstreperous",
     Sentences:
-      "The terrorist’s strident voice instilled a sense of fear in the hostage, but the army woman was unperturbed and focused only on rescuing the hostage.",
+      "The terrorist's strident voice instilled a sense of fear in the hostage, but the army woman was unperturbed and focused only on rescuing the hostage.",
   },
   {
     Word: "Stultify",
@@ -2467,13 +2467,13 @@ export const VOCAB_WORDS = [
     Meaning: "Help during times of need. Something that furnishes relief.",
     Synonyms: "Relief, Aid",
     Sentences:
-      "The poor were given succor during the pandemic. Everyone in the family was succored by Selena’s fortitude and steadfastness.",
+      "The poor were given succor during the pandemic. Everyone in the family was succored by Selena's fortitude and steadfastness.",
   },
   {
     Word: "Suffrage",
     Meaning: "The right of voting.",
     Synonyms: "",
-    Sentences: "Even as the world entered the 21st century, some nations still did not permit women’s suffrage.",
+    Sentences: "Even as the world entered the 21st century, some nations still did not permit women's suffrage.",
   },
   {
     Word: "Sui generis",
@@ -2543,7 +2543,7 @@ export const VOCAB_WORDS = [
     Word: "Teed off",
     Meaning: "Angry Annoyed",
     Synonyms: "",
-    Sentences: "Selenators were teed off with Selena’s record label for not promoting her song on radio.",
+    Sentences: "Selenators were teed off with Selena's record label for not promoting her song on radio.",
   },
   {
     Word: "Tenacity",
@@ -2555,7 +2555,7 @@ export const VOCAB_WORDS = [
     Word: "Tenuous",
     Meaning: "Having little substance or strength.",
     Synonyms: "Flimsy",
-    Sentences: "A lot of people’s finances are tenuous at best.",
+    Sentences: "A lot of people's finances are tenuous at best.",
   },
   {
     Word: "Tepid",
@@ -2649,7 +2649,7 @@ export const VOCAB_WORDS = [
     Word: "Truculent",
     Meaning: "Aggressiveness",
     Synonyms: "Livid, Vitriolic, Pugnacious",
-    Sentences: "Camila’s vituperative attack made Lauren truculent.",
+    Sentences: "Camila's vituperative attack made Lauren truculent.",
   },
   {
     Word: "Tryst",
@@ -2694,7 +2694,7 @@ export const VOCAB_WORDS = [
     Meaning: "Having, revealing or marked by a smug, ingratiating and false earnestness or spirituality. Plastic Oily",
     Synonyms: "Janus-faced, Insincere, Double-dealing",
     Sentences:
-      "An unctuous effort to appear religious to the voters. An unctuous appraisal of the musical talent shown by the boss’s daughter. Slowly braised, the meat becomes tender and unctuous, while the liquid is enriched with the marrow from the shank bone.",
+      "An unctuous effort to appear religious to the voters. An unctuous appraisal of the musical talent shown by the boss's daughter. Slowly braised, the meat becomes tender and unctuous, while the liquid is enriched with the marrow from the shank bone.",
   },
   {
     Word: "Undulating",
@@ -2707,7 +2707,7 @@ export const VOCAB_WORDS = [
     Meaning: "Leaving no doubt. Unquestionable",
     Synonyms: "Clear, Unambiguous, Lucid",
     Sentences:
-      "The jury ruled that her hand in the crime was unequivocal. The inauguration took place on the spot where thousands of angry rioters had to converged, at Trump’s urging, hoping to prevent Congress from certifying Biden’s unequivocal victory.",
+      "The jury ruled that her hand in the crime was unequivocal. The inauguration took place on the spot where thousands of angry rioters had to converged, at Trump's urging, hoping to prevent Congress from certifying Biden's unequivocal victory.",
   },
   { Word: "Untenable", Meaning: "A theory, argument or situation that cannot be defended.", Synonyms: "", Sentences: "" },
   {
@@ -2792,13 +2792,13 @@ export const VOCAB_WORDS = [
       "Felt in or as if in the internal organs of the body. Dealing with crude emotions. Related to or located in the viscera. Viscera: Internal organs located in the trunk of the body, ie, heart, liver, intestines, etc.",
     Synonyms: "",
     Sentences:
-      "When one’s waist circumference is being measured, indirectly their visceral fat is being measured. It is a visceral novel.",
+      "When one's waist circumference is being measured, indirectly their visceral fat is being measured. It is a visceral novel.",
   },
   {
     Word: "Vitiate",
     Meaning: "To reduce the quality of something. To damage something. To corrupt morally.",
     Synonyms: "Debase",
-    Sentences: "One should never try to vitiate other’s images.",
+    Sentences: "One should never try to vitiate other's images.",
   },
   {
     Word: "Vituperative",
