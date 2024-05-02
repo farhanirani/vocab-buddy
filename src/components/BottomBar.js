@@ -3,8 +3,8 @@ import { useNavigate } from "react-router-dom";
 
 import BottomNavigation from "@mui/material/BottomNavigation";
 import BottomNavigationAction from "@mui/material/BottomNavigationAction";
-import GamepadIcon from "@mui/icons-material/Gamepad";
 import SelectAllIcon from "@mui/icons-material/SelectAll";
+import GamepadOutlinedIcon from "@mui/icons-material/GamepadOutlined";
 
 import Paper from "@mui/material/Paper";
 
@@ -23,11 +23,14 @@ function BottomBar({ value, setValue }) {
       <BottomNavigation
         value={getValue(urlPage)}
         sx={{
-          bgcolor: "black",
-
+          bgcolor: "#efc1c4",
+          "& .MuiBottomNavigationAction-root": {
+            color: "#a07a7c",
+          },
           "& .Mui-selected": {
+            opacity: "1",
             "& .MuiSvgIcon-root, & .MuiBottomNavigationAction-label": {
-              color: "white",
+              color: "#133266",
             },
           },
           "& .MuiBottomNavigationAction-label": {
@@ -37,15 +40,13 @@ function BottomBar({ value, setValue }) {
         }}
       >
         <BottomNavigationAction
-          sx={{ color: "#5e5e5e" }}
           disableRipple
-          icon={<SelectAllIcon />}
+          icon={<SelectAllIcon sx={{ fontSize: 30 }} />}
           onClick={() => navigate("/home")}
         />
         <BottomNavigationAction
-          sx={{ color: "#5e5e5e" }}
           disableRipple
-          icon={<GamepadIcon />}
+          icon={<GamepadOutlinedIcon sx={{ fontSize: 28 }} />}
           onClick={() => navigate("/game")}
         />
       </BottomNavigation>

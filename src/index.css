@@ -1,8 +1,24 @@
 body {
+  font-family: "GFONT";
   margin: 0;
+  background-color: #efc1c4;
+  color: #133266;
 }
+
+/* @font-face {
+  font-family: "GFONT";
+  src: local("GFONT"), url("./fonts/Rubik/Rubik-VariableFont_wght.ttf") format("truetype");
+} */
 
 @font-face {
   font-family: "GFONT";
-  src: local("GFONT"), url("./fonts/Rubik/Rubik-VariableFont_wght.ttf") format("truetype");
+  src: local("GFONT"), url("./fonts/Balsamiq_Sans/BalsamiqSans-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "GFONTB";
+  src: local("GFONTB"), url("./fonts/Balsamiq_Sans/BalsamiqSans-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "GFONTI";
+  src: local("GFONTI"), url("./fonts/Balsamiq_Sans/BalsamiqSans-Italic.ttf") format("truetype");
 }

@@ -72,7 +72,7 @@ export const VOCAB_WORDS = [
     Word: "Agoraphobia",
     Meaning: "Fear of open spaces or lonely places. This is the opposite/antonym of Claustrophobia.",
     Synonyms: "",
-    Sentences: "",
+    Sentences: "Being in a deserted place brings out the agoraphobic side of her.",
   },
   {
     Word: "Alacrity",

@@ -4,7 +4,6 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { createTheme, ThemeProvider } from "@mui/material";
 import Box from "@mui/material/Box";
 
-import BottomBar from "./components/BottomBar";
 import HomeScreen from "./components/HomeScreen";
 import GameScreen from "./components/GameScreen";
 import Root from "./components/Root";
