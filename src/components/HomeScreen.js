@@ -14,7 +14,7 @@ function HomeScreen() {
       </div>
 
       {VOCAB_WORDS.map((word) => (
-        <div className="home__word__card">
+        <div className="home__word__card generic__border">
           <div style={{ fontFamily: "GFONTB", fontSize: "18px" }}>{word.Word}</div>
           <div style={{ marginTop: "2px", fontSize: "16px" }}>{word.Meaning}</div>
 
