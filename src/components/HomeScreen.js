@@ -6,7 +6,7 @@ function HomeScreen() {
   return (
     <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
       <div style={{ fontFamily: "GFONTB", marginTop: "30px", fontSize: "32px", letterSpacing: "0.2px" }}>VOCAB BUDDY</div>
-      <div style={{ fontFamily: "GFONTI", marginTop: "4px", fontSize: "13px" }}>
+      <div style={{ fontFamily: "GFONTI", marginTop: "4px", fontSize: "13px", textAlign: "center" }}>
         Master the English vocabulary, one word at a time!
       </div>
       <div style={{ fontSize: "8px", fontFamily: "GFONTI", marginTop: "4px", marginBottom: "20px" }}>

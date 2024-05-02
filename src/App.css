@@ -1,7 +1,22 @@
+* {
+  scroll-behavior: smooth;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+* {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 .home__word__card {
-  margin-top: 14px;
-  width: 92%;
   background-color: white;
+
+  width: 92%;
+  max-width: 600px;
+
+  margin-top: 14px;
   padding: 12px;
   box-sizing: border-box;
 
