@@ -966,7 +966,7 @@ export const VOCAB_WORDS = [
   {
     Word: "Ingenious",
     Meaning:
-      "Ingenuity Having or showing an unusual aptitude for discovering, inventing or contriving. Marked by originality, resourcefulness, and cleverness in conception or execution. Do not confuse 'ingenious' with 'ingenuous'.",
+      "Ingenuity, Having or showing an unusual aptitude for discovering, inventing or contriving. Marked by originality, resourcefulness, and cleverness in conception or execution. Do not confuse 'ingenious' with 'ingenuous'.",
     Synonyms: "Promethean, Innovative",
     Sentences: "She showed amazing ingenuity in finding ways to cut costs.",
   },
@@ -1914,7 +1914,7 @@ export const VOCAB_WORDS = [
     Synonyms: "Prudent, Thrifty",
     Sentences: "It is possible to be provident without living ascetically.",
   },
-  { Word: "Prudent", Meaning: "Shrewd Careful Avoiding risks Cautious", Synonyms: "Provident", Sentences: "" },
+  { Word: "Prudent", Meaning: "Shrewd, Careful, Avoiding risks, Cautious", Synonyms: "Provident", Sentences: "" },
   { Word: "Puerile", Meaning: "Silly, immature or childish behaviour.", Synonyms: "", Sentences: "" },
   {
     Word: "Pugnacious",
