@@ -13,6 +13,7 @@ import { modalBoxStyle } from "./CommonStyles";
 import { Box, Modal } from "@mui/material";
 
 import game_tut_img from "../assets/game_tut.png";
+import coffee_img from "../assets/coffee.png";
 
 function generateRandomArrayWithoutRepetition(n) {
   return Array.from({ length: n }, (_, index) => index + 1)
@@ -51,6 +52,10 @@ function GameScreen() {
   const [gameCompleted, setGameCompleted] = useState(false);
   const [gameSuccess, setGameSuccess] = useState(false);
 
+  const [welcomeModalOpen, setWelcomeModalOpen] = useState(false);
+  const [gameFailedModalOpen, setGameFailedModalOpen] = useState(false);
+  const [gameCompleteModalOpen, setGameCompleteModalOpen] = useState(false);
+
   useEffect(() => {
     (async () => {
       setLoading(true);
@@ -87,7 +92,9 @@ function GameScreen() {
         if (localStorage.getItem("progress_position") === null) {
           localStorage.setItem("progress_position", 0);
         } else {
-          setProgressPosition(parseInt(localStorage.getItem("progress_position")));
+          const retValue = parseInt(localStorage.getItem("progress_position"));
+          setProgressPosition(retValue);
+          setWelcomeModalOpen(retValue === 0);
         }
 
         // Lives left
@@ -123,7 +130,7 @@ function GameScreen() {
         localStorage.setItem("lives_left", newLives);
 
         if (newLives <= 0) {
-          alert("Game FAILED");
+          setGameFailedModalOpen(true);
           localStorage.setItem("game_complete_bool", true);
           localStorage.setItem("game_success_bool", false);
 
@@ -139,7 +146,7 @@ function GameScreen() {
 
       // Game completed successfully
       if (checkSucc && nextPosition >= VOCAB_WORDS.length) {
-        alert("SUCCESS");
+        setGameCompleteModalOpen(true);
 
         localStorage.setItem("game_complete_bool", true);
         localStorage.setItem("game_success_bool", true);
@@ -152,6 +159,8 @@ function GameScreen() {
 
   // Reset everything
   const handleRestartClicked = () => {
+    setGameCompleteModalOpen(false);
+
     setHasTheQuestionBeenAnswered(false);
     setGameCompleted(false);
     setGameSuccess(false);
@@ -175,7 +184,7 @@ function GameScreen() {
   // Next button clicked
   const handleNavigateNext = () => {
     if (gameCompleted) {
-      alert("GAME COMPLETE");
+      setGameCompleteModalOpen(true);
     } else {
       // Game still on
       setHasTheQuestionBeenAnswered(false);
@@ -322,15 +331,7 @@ function GameScreen() {
               </div>
             ) : (
               randomThreePositions.map((pos, idx) => (
-                <div
-                  key={idx}
-                  className="game__card generic__border"
-                  onClick={() => gameCardClicked(pos)}
-                  // style={{
-                  //   backgroundColor:
-                  //     hasTheQuestionBeenAnswered && pos === currentRandomPositionArray[currentPosition] - 1 ? "#30ff30" : "white",
-                  // }}
-                >
+                <div key={idx} className="game__card generic__border" onClick={() => gameCardClicked(pos)}>
                   {VOCAB_WORDS[pos]?.Meaning}
                 </div>
               ))
@@ -368,16 +369,46 @@ function GameScreen() {
       )}
 
       {/* MODALS */}
-      <Modal open={progressPosition === 0}>
+      <Modal open={welcomeModalOpen} onClose={() => setWelcomeModalOpen(false)}>
         <Box sx={modalBoxStyle}>
           <h2>\\ The Vocab Game //</h2>
           <div style={{ fontSize: "12px", textAlign: "center", marginBottom: "6px" }}>
-            Select the correct word meaning to advance!
+            Select the correct meaning to advance!
           </div>
           <img
             src={game_tut_img}
-            style={{ width: "240px", marginBottom: "20px", border: "2px solid #133266", borderRadius: "4px" }}
+            style={{ width: "240px", marginBottom: "20px", border: "2px solid #133266", borderRadius: "2px" }}
           />
+        </Box>
+      </Modal>
+
+      <Modal open={gameFailedModalOpen} onClose={() => setGameFailedModalOpen(false)}>
+        <Box sx={modalBoxStyle}>
+          <h2>Game over, try again :( </h2>
+          <div
+            onClick={handleRestartClicked}
+            className="generic__border"
+            style={{ backgroundColor: "white", borderRadius: "200px", height: "50px", width: "50px", marginBottom: "20px" }}
+          >
+            <RestartAltIcon sx={{ color: "#133266", fontSize: "48px" }} />
+          </div>
+        </Box>
+      </Modal>
+
+      <Modal open={gameCompleteModalOpen}>
+        <Box sx={modalBoxStyle}>
+          <h2> \\ VICTORY // </h2>
+          <div style={{ fontSize: "15px", textAlign: "center", marginBottom: "6px" }}>
+            You are worthy of being bought a coffee
+          </div>
+          <img src={coffee_img} style={{ width: "240px", marginBottom: "20px" }} />
+          <div
+            onClick={handleRestartClicked}
+            className="generic__border"
+            style={{ backgroundColor: "white", borderRadius: "200px", height: "50px", width: "50px", marginBottom: "20px" }}
+          >
+            <RestartAltIcon sx={{ color: "#133266", fontSize: "48px" }} />
+          </div>
         </Box>
       </Modal>
     </div>
