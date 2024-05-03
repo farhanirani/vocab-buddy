@@ -13,7 +13,6 @@ import { modalBoxStyle } from "./CommonStyles";
 import { Box, Modal } from "@mui/material";
 
 import game_tut_img from "../assets/game_tut.png";
-import coffee_img from "../assets/coffee.png";
 
 function generateRandomArrayWithoutRepetition(n) {
   return Array.from({ length: n }, (_, index) => index + 1)
@@ -400,7 +399,7 @@ function GameScreen() {
 
       <Modal open={gameCompleteModalOpen}>
         <Box sx={modalBoxStyle}>
-          <h2> //🎉🎉 VICTORY🎉🎉\\ </h2>
+          <h2> /🎉/🎉 VICTORY🎉\🎉\ </h2>
           <div style={{ fontSize: "16px", textAlign: "center", marginTop: "10px", marginBottom: "16px" }}>
             Congratulations! Well done!!
           </div>
@@ -409,8 +408,8 @@ function GameScreen() {
           </div>
           {/* <div style={{ fontSize: "15px", textAlign: "center", marginBottom: "6px" }}>
             You are worthy of being bought a coffee
-          </div> */}
-          {/* <img alt="coffee_img" src={coffee_img} style={{ width: "240px", marginBottom: "20px" }} /> */}
+          </div> 
+          <img alt="coffee_img" src={coffee_img} style={{ width: "240px", marginBottom: "20px" }} /> */}
           <div
             onClick={handleRestartClicked}
             className="generic__border"
