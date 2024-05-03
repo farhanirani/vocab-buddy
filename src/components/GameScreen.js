@@ -35,7 +35,6 @@ function GameScreen() {
   const [livesLeft, setLivesLeft] = useState(5);
   const [loading, setLoading] = useState(false);
   const totalLives = 5;
-  const totalWords = VOCAB_WORDS.length;
 
   const [currentRandomPositionArray, setCurrentRandomPositionArray] = useState([]);
   const [currentPosition, setCurrentPosition] = useState(0);
@@ -44,12 +43,14 @@ function GameScreen() {
   const [hasTheQuestionBeenAnswered, setHasTheQuestionBeenAnswered] = useState(false);
   const [isCurrentAnswerCorrect, setIsCurrentAnswerCorrect] = useState(false);
 
+  const [gameCompleted, setGameCompleted] = useState(false);
+
   useEffect(() => {
     (async () => {
       setLoading(true);
       try {
         if (localStorage.getItem("vocab_array") === null) {
-          const wordArr = generateRandomArrayWithoutRepetition(totalWords);
+          const wordArr = generateRandomArrayWithoutRepetition(VOCAB_WORDS.length);
           setCurrentRandomPositionArray(wordArr);
           localStorage.setItem("vocab_array", JSON.stringify(wordArr));
         } else {
@@ -77,14 +78,16 @@ function GameScreen() {
   }, []);
 
   useEffect(() => {
-    setRandomThreePositions(generateRandomNumberArray(totalWords, currentRandomPositionArray[currentPosition] - 1));
-    setProgress(Math.ceil((currentPosition / totalWords) * 100));
+    setRandomThreePositions(generateRandomNumberArray(VOCAB_WORDS.length - 1, currentRandomPositionArray[currentPosition] - 1));
+    setProgress(Math.ceil((currentPosition / VOCAB_WORDS.length) * 100));
   }, [currentPosition, currentRandomPositionArray]);
 
   const gameCardClicked = (pos) => {
     if (!hasTheQuestionBeenAnswered) {
       setHasTheQuestionBeenAnswered(true);
       setIsCurrentAnswerCorrect(pos === currentRandomPositionArray[currentPosition] - 1);
+
+      // Wrong selection
       if (pos !== currentRandomPositionArray[currentPosition] - 1) {
         const newLives = livesLeft - 1;
         if (newLives <= 0) {
@@ -96,13 +99,22 @@ function GameScreen() {
           localStorage.setItem("lives_left", newLives);
         }
       }
+
+      // Game completed successfully
+      const nextPosition = parseInt(currentPosition) + 1;
+      if (nextPosition === VOCAB_WORDS.length) {
+        alert("SUCCESS");
+        setGameCompleted(true);
+      }
     }
   };
 
+  // Reset everything
   const handleRestartClicked = () => {
     setHasTheQuestionBeenAnswered(false);
+    setGameCompleted(false);
 
-    const wordArr = generateRandomArrayWithoutRepetition(totalWords);
+    const wordArr = generateRandomArrayWithoutRepetition(VOCAB_WORDS.length);
     setCurrentRandomPositionArray(wordArr);
     localStorage.setItem("vocab_array", JSON.stringify(wordArr));
 
@@ -114,14 +126,15 @@ function GameScreen() {
   };
 
   const handleNavigateNext = () => {
-    setHasTheQuestionBeenAnswered(false);
-
-    console.log("first", currentPosition);
     const nextPosition = parseInt(currentPosition) + 1;
 
-    if (nextPosition === totalWords) {
-      console.log("SUCCESS");
+    // Game completed successfully
+    if (nextPosition === VOCAB_WORDS.length) {
+      alert("SUCCESS");
+      setGameCompleted(true);
+      // Game still on
     } else {
+      setHasTheQuestionBeenAnswered(false);
       setCurrentPosition(nextPosition);
       localStorage.setItem("curr_position", nextPosition);
     }
@@ -137,6 +150,7 @@ function GameScreen() {
           display: "flex",
           justifyContent: "space-between",
           textAlign: "center",
+          alignItems: "center",
         }}
       >
         <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
@@ -157,21 +171,41 @@ function GameScreen() {
           GAME
         </div> */}
         <div>
-          <div>
-            {currentPosition} / {totalWords}
-          </div>
-          <LinearProgress
-            sx={{
-              width: "80px",
-              marginTop: "4px",
-              backgroundColor: "white",
-              "& .MuiLinearProgress-bar": {
-                backgroundColor: "#133266",
-              },
-            }}
-            variant="determinate"
-            value={progress}
-          />
+          {gameCompleted ? (
+            <>
+              <div style={{ fontFamily: "GFONTI" }}>FIN...</div>
+              <LinearProgress
+                sx={{
+                  width: "80px",
+                  marginTop: "4px",
+                  backgroundColor: "white",
+                  "& .MuiLinearProgress-bar": {
+                    backgroundColor: "#133266",
+                  },
+                }}
+                variant="determinate"
+                value={100}
+              />
+            </>
+          ) : (
+            <>
+              <div>
+                {currentPosition} / {VOCAB_WORDS.length}
+              </div>
+              <LinearProgress
+                sx={{
+                  width: "80px",
+                  marginTop: "4px",
+                  backgroundColor: "white",
+                  "& .MuiLinearProgress-bar": {
+                    backgroundColor: "#133266",
+                  },
+                }}
+                variant="determinate"
+                value={progress}
+              />
+            </>
+          )}
         </div>
       </div>
       {loading || !(currentRandomPositionArray.length > 0) ? (
