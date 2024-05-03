@@ -376,6 +376,7 @@ function GameScreen() {
             Select the correct meaning to advance!
           </div>
           <img
+            alt="guide_image"
             src={game_tut_img}
             style={{ width: "240px", marginBottom: "20px", border: "2px solid #133266", borderRadius: "2px" }}
           />
@@ -401,7 +402,7 @@ function GameScreen() {
           <div style={{ fontSize: "15px", textAlign: "center", marginBottom: "6px" }}>
             You are worthy of being bought a coffee
           </div>
-          <img src={coffee_img} style={{ width: "240px", marginBottom: "20px" }} />
+          <img alt="coffee_img" src={coffee_img} style={{ width: "240px", marginBottom: "20px" }} />
           <div
             onClick={handleRestartClicked}
             className="generic__border"
