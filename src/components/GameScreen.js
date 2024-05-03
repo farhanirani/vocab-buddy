@@ -9,6 +9,10 @@ import CheckIcon from "@mui/icons-material/Check";
 import StartIcon from "@mui/icons-material/Start";
 
 import { VOCAB_WORDS } from "../constants";
+import { modalBoxStyle } from "./CommonStyles";
+import { Box, Modal } from "@mui/material";
+
+import game_tut_img from "../assets/game_tut.png";
 
 function generateRandomArrayWithoutRepetition(n) {
   return Array.from({ length: n }, (_, index) => index + 1)
@@ -362,6 +366,20 @@ function GameScreen() {
           </div>
         </div>
       )}
+
+      {/* MODALS */}
+      <Modal open={progressPosition === 0}>
+        <Box sx={modalBoxStyle}>
+          <h2>\\ The Vocab Game //</h2>
+          <div style={{ fontSize: "12px", textAlign: "center", marginBottom: "6px" }}>
+            Select the correct word meaning to advance!
+          </div>
+          <img
+            src={game_tut_img}
+            style={{ width: "240px", marginBottom: "20px", border: "2px solid #133266", borderRadius: "4px" }}
+          />
+        </Box>
+      </Modal>
     </div>
   );
 }

@@ -1,7 +1,6 @@
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import { createTheme, ThemeProvider } from "@mui/material";
 import Box from "@mui/material/Box";
 
 import HomeScreen from "./components/HomeScreen";
@@ -10,12 +9,6 @@ import Root from "./components/Root";
 import ErrorPage from "./components/ErrorPage";
 
 import "./App.css";
-
-export const muiBaseTheme = createTheme({
-  typography: {
-    fontFamily: "Roboto Mono",
-  },
-});
 
 const router = createBrowserRouter([
   {
@@ -33,9 +26,7 @@ const router = createBrowserRouter([
 function App() {
   return (
     <Box sx={{ pb: 7 }}>
-      <ThemeProvider theme={muiBaseTheme}>
-        <RouterProvider router={router} />
-      </ThemeProvider>
+      <RouterProvider router={router} />
     </Box>
   );
 }
