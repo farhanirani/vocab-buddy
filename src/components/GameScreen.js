@@ -34,21 +34,35 @@ function GameScreen() {
   const [progress, setProgress] = useState(0);
   const [livesLeft, setLivesLeft] = useState(5);
   const [loading, setLoading] = useState(false);
-  const totalLives = 5;
+  const totalLives = 3;
 
   const [currentRandomPositionArray, setCurrentRandomPositionArray] = useState([]);
   const [currentPosition, setCurrentPosition] = useState(0);
+  const [progressPosition, setProgressPosition] = useState(0);
   const [randomThreePositions, setRandomThreePositions] = useState([]);
 
   const [hasTheQuestionBeenAnswered, setHasTheQuestionBeenAnswered] = useState(false);
   const [isCurrentAnswerCorrect, setIsCurrentAnswerCorrect] = useState(false);
 
   const [gameCompleted, setGameCompleted] = useState(false);
+  const [gameSuccess, setGameSuccess] = useState(false);
 
   useEffect(() => {
     (async () => {
       setLoading(true);
       try {
+        if (localStorage.getItem("game_complete_bool") === null) {
+          localStorage.setItem("game_complete_bool", false);
+        } else {
+          setGameCompleted(localStorage.getItem("game_complete_bool") === "true");
+        }
+
+        if (localStorage.getItem("game_success_bool") === null) {
+          localStorage.setItem("game_success_bool", false);
+        } else {
+          setGameSuccess(localStorage.getItem("game_success_bool") === "true");
+        }
+
         if (localStorage.getItem("vocab_array") === null) {
           const wordArr = generateRandomArrayWithoutRepetition(VOCAB_WORDS.length);
           setCurrentRandomPositionArray(wordArr);
@@ -58,17 +72,25 @@ function GameScreen() {
           setCurrentRandomPositionArray(retrievedArray);
         }
 
+        // Current game position
         if (localStorage.getItem("curr_position") === null) {
           localStorage.setItem("curr_position", 0);
         } else {
-          const retrievedPos = localStorage.getItem("curr_position");
-          setCurrentPosition(retrievedPos);
+          setCurrentPosition(parseInt(localStorage.getItem("curr_position")));
         }
 
-        if (localStorage.getItem("lives_left") === null) {
-          localStorage.setItem("lives_left", 5);
+        // Progress bar position
+        if (localStorage.getItem("progress_position") === null) {
+          localStorage.setItem("progress_position", 0);
         } else {
-          const retrievedLives = localStorage.getItem("lives_left");
+          setProgressPosition(parseInt(localStorage.getItem("progress_position")));
+        }
+
+        // Lives left
+        if (localStorage.getItem("lives_left") === null) {
+          localStorage.setItem("lives_left", totalLives);
+        } else {
+          const retrievedLives = parseInt(localStorage.getItem("lives_left"));
           setLivesLeft(retrievedLives);
         }
       } finally {
@@ -79,32 +101,47 @@ function GameScreen() {
 
   useEffect(() => {
     setRandomThreePositions(generateRandomNumberArray(VOCAB_WORDS.length - 1, currentRandomPositionArray[currentPosition] - 1));
-    setProgress(Math.ceil((currentPosition / VOCAB_WORDS.length) * 100));
-  }, [currentPosition, currentRandomPositionArray]);
+    setProgress(Math.ceil((progressPosition / VOCAB_WORDS.length) * 100));
+  }, [currentPosition, progressPosition, currentRandomPositionArray]);
 
+  // PLAYING THE CARD
   const gameCardClicked = (pos) => {
     if (!hasTheQuestionBeenAnswered) {
       setHasTheQuestionBeenAnswered(true);
       setIsCurrentAnswerCorrect(pos === currentRandomPositionArray[currentPosition] - 1);
+      let checkSucc = true;
+      const nextPosition = parseInt(currentPosition) + 1;
 
       // Wrong selection
       if (pos !== currentRandomPositionArray[currentPosition] - 1) {
         const newLives = livesLeft - 1;
+        setLivesLeft(newLives);
+        localStorage.setItem("lives_left", newLives);
+
         if (newLives <= 0) {
-          console.log("game over");
-          setLivesLeft(5);
-          localStorage.setItem("lives_left", 5);
-        } else {
-          setLivesLeft(newLives);
-          localStorage.setItem("lives_left", newLives);
+          alert("Game FAILED");
+          localStorage.setItem("game_complete_bool", true);
+          localStorage.setItem("game_success_bool", false);
+
+          setGameCompleted(true);
+          setGameSuccess(false);
+          checkSucc = false;
         }
+      } else {
+        // Move progress bar ahead if answered successfully
+        localStorage.setItem("progress_position", nextPosition);
+        setProgressPosition(nextPosition);
       }
 
       // Game completed successfully
-      const nextPosition = parseInt(currentPosition) + 1;
-      if (nextPosition === VOCAB_WORDS.length) {
+      if (checkSucc && nextPosition >= VOCAB_WORDS.length) {
         alert("SUCCESS");
+
+        localStorage.setItem("game_complete_bool", true);
+        localStorage.setItem("game_success_bool", true);
+
         setGameCompleted(true);
+        setGameSuccess(true);
       }
     }
   };
@@ -113,30 +150,40 @@ function GameScreen() {
   const handleRestartClicked = () => {
     setHasTheQuestionBeenAnswered(false);
     setGameCompleted(false);
+    setGameSuccess(false);
 
     const wordArr = generateRandomArrayWithoutRepetition(VOCAB_WORDS.length);
     setCurrentRandomPositionArray(wordArr);
     localStorage.setItem("vocab_array", JSON.stringify(wordArr));
 
     setCurrentPosition(0);
+    setProgressPosition(0);
     localStorage.setItem("curr_position", 0);
+    localStorage.setItem("progress_position", 0);
 
-    setLivesLeft(5);
-    localStorage.setItem("lives_left", 5);
+    setLivesLeft(totalLives);
+    localStorage.setItem("lives_left", totalLives);
+
+    localStorage.setItem("game_complete_bool", false);
+    localStorage.setItem("game_success_bool", false);
   };
 
+  // Next button clicked
   const handleNavigateNext = () => {
-    const nextPosition = parseInt(currentPosition) + 1;
-
-    // Game completed successfully
-    if (nextPosition === VOCAB_WORDS.length) {
-      alert("SUCCESS");
-      setGameCompleted(true);
-      // Game still on
+    if (gameCompleted) {
+      alert("GAME COMPLETE");
     } else {
+      // Game still on
       setHasTheQuestionBeenAnswered(false);
-      setCurrentPosition(nextPosition);
+
+      const nextPosition = parseInt(currentPosition) + 1;
       localStorage.setItem("curr_position", nextPosition);
+      setCurrentPosition(nextPosition);
+
+      if (!isCurrentAnswerCorrect) {
+        localStorage.setItem("progress_position", nextPosition);
+        setProgressPosition(nextPosition);
+      }
     }
   };
 
@@ -163,34 +210,31 @@ function GameScreen() {
           </div>
           <div>
             {[...Array(totalLives)].map((_, index) =>
-              index < livesLeft ? <FavoriteIcon key={index} /> : <FavoriteBorderIcon key={index} />
+              index < livesLeft ? (
+                <FavoriteIcon fontSize="small" key={index} />
+              ) : (
+                <FavoriteBorderIcon fontSize="small" key={index} />
+              )
             )}
           </div>
         </div>
-        {/* <div style={{ fontFamily: "GFONTI", marginTop: "4px", fontSize: "20px", textAlign: "center", letterSpacing: "2px" }}>
-          GAME
-        </div> */}
+
+        {gameCompleted && !gameSuccess && (
+          <div style={{ fontFamily: "GFONTI", marginTop: "4px", fontSize: "10px", textAlign: "center", letterSpacing: "2px" }}>
+            GAME OVER,
+            <br /> TRY AGAIN ...
+          </div>
+        )}
+
         <div>
-          {gameCompleted ? (
+          {gameCompleted && gameSuccess ? (
             <>
-              <div style={{ fontFamily: "GFONTI" }}>FIN...</div>
-              <LinearProgress
-                sx={{
-                  width: "80px",
-                  marginTop: "4px",
-                  backgroundColor: "white",
-                  "& .MuiLinearProgress-bar": {
-                    backgroundColor: "#133266",
-                  },
-                }}
-                variant="determinate"
-                value={100}
-              />
+              <div style={{ fontFamily: "GFONTI" }}>VICOTRY 🎉</div>
             </>
           ) : (
-            <>
+            <div style={{ fontFamily: "GFONTI" }}>
               <div>
-                {currentPosition} / {VOCAB_WORDS.length}
+                {progressPosition} / {VOCAB_WORDS.length}
               </div>
               <LinearProgress
                 sx={{
@@ -204,10 +248,11 @@ function GameScreen() {
                 variant="determinate"
                 value={progress}
               />
-            </>
+            </div>
           )}
         </div>
       </div>
+
       {loading || !(currentRandomPositionArray.length > 0) ? (
         <>loading...</>
       ) : (
@@ -226,12 +271,13 @@ function GameScreen() {
             <div>
               {hasTheQuestionBeenAnswered && isCurrentAnswerCorrect && <CheckIcon sx={{ color: "green", width: "63.2px" }} />}
               {hasTheQuestionBeenAnswered && !isCurrentAnswerCorrect && <ClearIcon sx={{ color: "red", width: "63.2px" }} />}
+              {gameCompleted && !hasTheQuestionBeenAnswered && <div style={{ width: "63.2px" }}></div>}
             </div>
             <div style={{ fontFamily: "GFONTB", fontSize: "32px", letterSpacing: "0.2px" }}>
               {VOCAB_WORDS[currentRandomPositionArray[currentPosition] - 1]?.Word}
             </div>
             <div>
-              {hasTheQuestionBeenAnswered && (
+              {!gameCompleted && hasTheQuestionBeenAnswered && (
                 <div
                   onClick={handleNavigateNext}
                   className="generic__border"
@@ -246,12 +292,27 @@ function GameScreen() {
                   <StartIcon sx={{ color: "#133266", fontSize: "42px" }} />
                 </div>
               )}
+              {gameCompleted && (
+                <div
+                  onClick={handleRestartClicked}
+                  className="generic__border"
+                  style={{
+                    backgroundColor: "white",
+                    borderRadius: "200px",
+                    alignContent: "center",
+                    height: "60px",
+                    width: "60px",
+                  }}
+                >
+                  <RestartAltIcon sx={{ color: "#133266", fontSize: "42px" }} />
+                </div>
+              )}
             </div>
           </div>
 
           {/* meanings */}
           <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-            {hasTheQuestionBeenAnswered ? (
+            {gameCompleted || hasTheQuestionBeenAnswered ? (
               <div className="game__card generic__border">
                 {VOCAB_WORDS[currentRandomPositionArray[currentPosition] - 1]?.Meaning}
               </div>
