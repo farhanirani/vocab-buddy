@@ -91,6 +91,7 @@ function GameScreen() {
         // Progress bar position
         if (localStorage.getItem("progress_position") === null) {
           localStorage.setItem("progress_position", 0);
+          setWelcomeModalOpen(true);
         } else {
           const retValue = parseInt(localStorage.getItem("progress_position"));
           setProgressPosition(retValue);
