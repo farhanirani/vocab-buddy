@@ -39,7 +39,7 @@ function GameScreen() {
   const [progress, setProgress] = useState(0);
   const [livesLeft, setLivesLeft] = useState(5);
   const [loading, setLoading] = useState(false);
-  const totalLives = 3;
+  const totalLives = 6;
 
   const [currentRandomPositionArray, setCurrentRandomPositionArray] = useState([]);
   const [currentPosition, setCurrentPosition] = useState(0);
@@ -161,6 +161,7 @@ function GameScreen() {
   // Reset everything
   const handleRestartClicked = () => {
     setGameCompleteModalOpen(false);
+    setGameFailedModalOpen(false);
 
     setHasTheQuestionBeenAnswered(false);
     setGameCompleted(false);
@@ -399,11 +400,17 @@ function GameScreen() {
 
       <Modal open={gameCompleteModalOpen}>
         <Box sx={modalBoxStyle}>
-          <h2> \\ VICTORY // </h2>
-          <div style={{ fontSize: "15px", textAlign: "center", marginBottom: "6px" }}>
-            You are worthy of being bought a coffee
+          <h2> //🎉🎉 VICTORY🎉🎉\\ </h2>
+          <div style={{ fontSize: "16px", textAlign: "center", marginTop: "10px", marginBottom: "16px" }}>
+            Congratulations! Well done!!
           </div>
-          <img alt="coffee_img" src={coffee_img} style={{ width: "240px", marginBottom: "20px" }} />
+          <div style={{ fontSize: "16px", textAlign: "center", marginBottom: "16px" }}>
+            Give youreself a pat on the back, you deserve it!
+          </div>
+          {/* <div style={{ fontSize: "15px", textAlign: "center", marginBottom: "6px" }}>
+            You are worthy of being bought a coffee
+          </div> */}
+          {/* <img alt="coffee_img" src={coffee_img} style={{ width: "240px", marginBottom: "20px" }} /> */}
           <div
             onClick={handleRestartClicked}
             className="generic__border"
