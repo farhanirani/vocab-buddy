@@ -71,15 +71,6 @@ function GameScreen() {
           setGameSuccess(localStorage.getItem("game_success_bool") === "true");
         }
 
-        if (localStorage.getItem("vocab_array") === null) {
-          const wordArr = generateRandomArrayWithoutRepetition(VOCAB_WORDS.length);
-          setCurrentRandomPositionArray(wordArr);
-          localStorage.setItem("vocab_array", JSON.stringify(wordArr));
-        } else {
-          const retrievedArray = JSON.parse(localStorage.getItem("vocab_array"));
-          setCurrentRandomPositionArray(retrievedArray);
-        }
-
         // Current game position
         if (localStorage.getItem("curr_position") === null) {
           localStorage.setItem("curr_position", 0);
@@ -103,6 +94,22 @@ function GameScreen() {
         } else {
           const retrievedLives = parseInt(localStorage.getItem("lives_left"));
           setLivesLeft(retrievedLives);
+        }
+
+        // The entire mixed array of positions
+        if (localStorage.getItem("vocab_array") === null) {
+          const wordArr = generateRandomArrayWithoutRepetition(VOCAB_WORDS.length);
+          setCurrentRandomPositionArray(wordArr);
+          localStorage.setItem("vocab_array", JSON.stringify(wordArr));
+        } else {
+          const retrievedArray = JSON.parse(localStorage.getItem("vocab_array"));
+
+          if (retrievedArray.length === VOCAB_WORDS.length) {
+            setCurrentRandomPositionArray(retrievedArray);
+          } else {
+            // If the words have been updated
+            handleRestartClicked();
+          }
         }
       } finally {
         setLoading(false);
