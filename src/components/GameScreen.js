@@ -36,9 +36,9 @@ function generateRandomNumberArray(n, actual) {
 
 function GameScreen() {
   const [progress, setProgress] = useState(0);
-  const [livesLeft, setLivesLeft] = useState(5);
-  const [loading, setLoading] = useState(false);
   const totalLives = 6;
+  const [livesLeft, setLivesLeft] = useState(totalLives);
+  const [loading, setLoading] = useState(false);
 
   const [currentRandomPositionArray, setCurrentRandomPositionArray] = useState([]);
   const [currentPosition, setCurrentPosition] = useState(0);
