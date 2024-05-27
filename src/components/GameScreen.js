@@ -96,6 +96,13 @@ function GameScreen() {
           setLivesLeft(retrievedLives);
         }
 
+        // Has the question been answered
+        if (localStorage.getItem("question__answered") === null) {
+          localStorage.setItem("question__answered", false);
+        } else {
+          setHasTheQuestionBeenAnswered(localStorage.getItem("question__answered") === "true");
+        }
+
         // The entire mixed array of positions
         if (localStorage.getItem("vocab_array") === null) {
           const wordArr = generateRandomArrayWithoutRepetition(VOCAB_WORDS.length);
@@ -126,6 +133,8 @@ function GameScreen() {
   const gameCardClicked = (pos) => {
     if (!hasTheQuestionBeenAnswered) {
       setHasTheQuestionBeenAnswered(true);
+      localStorage.setItem("question__answered", true);
+
       setIsCurrentAnswerCorrect(pos === currentRandomPositionArray[currentPosition] - 1);
       let checkSucc = true;
       const nextPosition = parseInt(currentPosition) + 1;
@@ -185,6 +194,7 @@ function GameScreen() {
     setLivesLeft(totalLives);
     localStorage.setItem("lives_left", totalLives);
 
+    localStorage.setItem("question__answered", false);
     localStorage.setItem("game_complete_bool", false);
     localStorage.setItem("game_success_bool", false);
   };
@@ -196,6 +206,7 @@ function GameScreen() {
     } else {
       // Game still on
       setHasTheQuestionBeenAnswered(false);
+      localStorage.setItem("question__answered", false);
 
       const nextPosition = parseInt(currentPosition) + 1;
       localStorage.setItem("curr_position", nextPosition);

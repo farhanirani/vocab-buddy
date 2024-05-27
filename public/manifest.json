@@ -1,52 +1,63 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Vocab Buddy",
+  "name": "A Vocabulary Buddy",
   "icons": [
     {
-      "src": "../icons/icon-48.webp",
-      "type": "image/png",
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-48.webp",
+      "type": "image/webp",
       "sizes": "48x48",
       "purpose": "any maskable"
     },
     {
-      "src": "../icons/icon-72.webp",
-      "type": "image/png",
+      "src": "icons/icon-72.webp",
+      "type": "image/webp",
       "sizes": "72x72",
       "purpose": "any maskable"
     },
     {
-      "src": "../icons/icon-96.webp",
-      "type": "image/png",
+      "src": "icons/icon-96.webp",
+      "type": "image/webp",
       "sizes": "96x96",
       "purpose": "any maskable"
     },
     {
-      "src": "../icons/icon-128.webp",
-      "type": "image/png",
+      "src": "icons/icon-128.webp",
+      "type": "image/webp",
       "sizes": "128x128",
       "purpose": "any maskable"
     },
     {
-      "src": "../icons/icon-192.webp",
-      "type": "image/png",
+      "src": "icons/icon-192.webp",
+      "type": "image/webp",
       "sizes": "192x192",
       "purpose": "any maskable"
     },
     {
-      "src": "../icons/icon-256.webp",
-      "type": "image/png",
+      "src": "icons/icon-256.webp",
+      "type": "image/webp",
       "sizes": "256x256",
       "purpose": "any maskable"
     },
     {
-      "src": "../icons/icon-512.webp",
-      "type": "image/png",
+      "src": "icons/icon-512.webp",
+      "type": "image/webp",
       "sizes": "512x512",
       "purpose": "any maskable"
     }
   ],
   "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "'#eeeeee'"
+
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "display": "standalone"
 }
