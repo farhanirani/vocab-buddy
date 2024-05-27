@@ -103,6 +103,13 @@ function GameScreen() {
           setHasTheQuestionBeenAnswered(localStorage.getItem("question__answered") === "true");
         }
 
+        // Is the current answer correct
+        if (localStorage.getItem("current__answer__correct") === null) {
+          localStorage.setItem("current__answer__correct", false);
+        } else {
+          setIsCurrentAnswerCorrect(localStorage.getItem("current__answer__correct") === "true");
+        }
+
         // The entire mixed array of positions
         if (localStorage.getItem("vocab_array") === null) {
           const wordArr = generateRandomArrayWithoutRepetition(VOCAB_WORDS.length);
@@ -136,6 +143,7 @@ function GameScreen() {
       localStorage.setItem("question__answered", true);
 
       setIsCurrentAnswerCorrect(pos === currentRandomPositionArray[currentPosition] - 1);
+      localStorage.setItem("current__answer__correct", pos === currentRandomPositionArray[currentPosition] - 1);
       let checkSucc = true;
       const nextPosition = parseInt(currentPosition) + 1;
 
