@@ -38,7 +38,7 @@ function GameScreen() {
   const [progress, setProgress] = useState(0);
   const totalLives = 6;
   const [livesLeft, setLivesLeft] = useState(totalLives);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   const [currentRandomPositionArray, setCurrentRandomPositionArray] = useState([]);
   const [currentPosition, setCurrentPosition] = useState(0);
@@ -132,7 +132,9 @@ function GameScreen() {
   }, []);
 
   useEffect(() => {
-    setRandomThreePositions(generateRandomNumberArray(VOCAB_WORDS.length - 1, currentRandomPositionArray[currentPosition] - 1));
+    setRandomThreePositions(
+      generateRandomNumberArray(VOCAB_WORDS.length - 1, currentRandomPositionArray[currentPosition] - 1)
+    );
     setProgress(Math.ceil((progressPosition / VOCAB_WORDS.length) * 100));
   }, [currentPosition, progressPosition, currentRandomPositionArray]);
 
@@ -229,7 +231,13 @@ function GameScreen() {
 
   return (
     <div
-      style={{ display: "flex", flexDirection: "column", alignItems: "center", margin: "18px auto 0 auto", maxWidth: "700px" }}
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        margin: "18px auto 0 auto",
+        maxWidth: "700px",
+      }}
     >
       <div
         style={{
@@ -260,7 +268,15 @@ function GameScreen() {
         </div>
 
         {gameCompleted && !gameSuccess && (
-          <div style={{ fontFamily: "GFONTI", marginTop: "4px", fontSize: "10px", textAlign: "center", letterSpacing: "2px" }}>
+          <div
+            style={{
+              fontFamily: "GFONTI",
+              marginTop: "4px",
+              fontSize: "10px",
+              textAlign: "center",
+              letterSpacing: "2px",
+            }}
+          >
             GAME OVER,
             <br /> TRY AGAIN ...
           </div>
@@ -309,8 +325,12 @@ function GameScreen() {
             }}
           >
             <div>
-              {hasTheQuestionBeenAnswered && isCurrentAnswerCorrect && <CheckIcon sx={{ color: "green", width: "63.2px" }} />}
-              {hasTheQuestionBeenAnswered && !isCurrentAnswerCorrect && <ClearIcon sx={{ color: "red", width: "63.2px" }} />}
+              {hasTheQuestionBeenAnswered && isCurrentAnswerCorrect && (
+                <CheckIcon sx={{ color: "green", width: "63.2px" }} />
+              )}
+              {hasTheQuestionBeenAnswered && !isCurrentAnswerCorrect && (
+                <ClearIcon sx={{ color: "red", width: "63.2px" }} />
+              )}
               {gameCompleted && !hasTheQuestionBeenAnswered && <div style={{ width: "63.2px" }}></div>}
             </div>
             <div style={{ fontFamily: "GFONTB", fontSize: "32px", letterSpacing: "0.2px" }}>
@@ -416,7 +436,13 @@ function GameScreen() {
           <div
             onClick={handleRestartClicked}
             className="generic__border"
-            style={{ backgroundColor: "white", borderRadius: "200px", height: "50px", width: "50px", marginBottom: "20px" }}
+            style={{
+              backgroundColor: "white",
+              borderRadius: "200px",
+              height: "50px",
+              width: "50px",
+              marginBottom: "20px",
+            }}
           >
             <RestartAltIcon sx={{ color: "#133266", fontSize: "48px" }} />
           </div>
@@ -439,7 +465,13 @@ function GameScreen() {
           <div
             onClick={handleRestartClicked}
             className="generic__border"
-            style={{ backgroundColor: "white", borderRadius: "200px", height: "50px", width: "50px", marginBottom: "20px" }}
+            style={{
+              backgroundColor: "white",
+              borderRadius: "200px",
+              height: "50px",
+              width: "50px",
+              marginBottom: "20px",
+            }}
           >
             <RestartAltIcon sx={{ color: "#133266", fontSize: "48px" }} />
           </div>
